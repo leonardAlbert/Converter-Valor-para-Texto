@@ -13,16 +13,16 @@
  * para assim serem convertidos.
  *
  * 
- * @category		São Silvestre
+ * @category		
  * @package 		library
- * @subpackage		FCL/Helper
- * @author  		Leonard Albert <lampedro@fcl.com.br>
+ * @subpackage		Helper
+ * @author  		Leonard Albert 
  * @filesource		
  * @since   		
  * @version 		
  * 
  */
-class FCL_Helper_ConverterValorPorExtenso 
+class Helper_ConverterValorPorExtenso 
 {
 	//--------------------------------------------------------------------------
 	
