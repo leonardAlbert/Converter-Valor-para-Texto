@@ -289,7 +289,7 @@ class Helper_ConverterValorPorExtenso
 	 * @return int
 	 */
 	private function real($numero) 
-    {
+	{
 		$virtula = strrpos($numero, ',');
 		// Verifica se o numero possui virtula.
 		if ($virtula) {
@@ -314,7 +314,7 @@ class Helper_ConverterValorPorExtenso
 	 * @return int
 	 */
 	private function centavos($numero) 
-    {
+	{
 		$virgula = strrpos($numero, ',');
 		// Verifica se o numero possui virtula.
 		if ($virgula) {
@@ -422,7 +422,7 @@ class Helper_ConverterValorPorExtenso
 	//--------------------------------------------------------------------------
 	
 	/**
-     * Pega o valor por extenso para um número com duas casa decimal. (10-99)
+         * Pega o valor por extenso para um número com duas casa decimal. (10-99)
 	 * 
 	 * @param string $numero
 	 * @return string
@@ -467,7 +467,7 @@ class Helper_ConverterValorPorExtenso
 	//--------------------------------------------------------------------------
 	
 	/**
-     * Pega o valor por extenso para um número com três casa decimal. (100-999)
+         * Pega o valor por extenso para um número com três casa decimal. (100-999)
 	 * 
 	 * @param array/string $numero
 	 * @return string
