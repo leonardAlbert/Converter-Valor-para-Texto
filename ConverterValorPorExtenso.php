@@ -267,14 +267,11 @@ class Helper_ConverterValorPorExtenso
 		// Remove os espaços em branco da string.
 		$numero = str_ireplace(' ', '', $numero);
 
-		$real = $this->real($numero);
+		$real	 = $this->real($numero);
 		$centavo = $this->centavos($numero);
 		
-		// Passa o real para array com nós de três(3) por pedaços.
-		$arrayReais = str_split($real, 3);
-		
 		// Converte para array onde, $arrayNumeros[0] = Reais e $arrayNumeros[1] = Centavos.
-		$arrayNumeros[self::REAIS] = $arrayReais; // Reais.
+		$arrayNumeros[self::REAIS] = $real; // Reais.
 		$arrayNumeros[self::CENTAVOS] = $centavo; // Centavos.
 
 		return $arrayNumeros;
@@ -286,7 +283,7 @@ class Helper_ConverterValorPorExtenso
 	 * Devolve o numero formatado referênte aos reais, antes da virgula.
 	 * 
 	 * @param string $numero
-	 * @return int
+	 * @return array
 	 */
 	private function real($numero) 
 	{
@@ -302,7 +299,10 @@ class Helper_ConverterValorPorExtenso
 		// Preenche os campos vazios.
 		$real = str_pad($real, 66 , "0", STR_PAD_LEFT);
 		
-		return $real;
+		// Quebra em array o numero Real em tres(3) posições.
+		$arrayReais = str_split($real, 3);
+		
+		return $arrayReais;
 	}
 	
 	//--------------------------------------------------------------------------
