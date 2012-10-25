@@ -288,7 +288,8 @@ class Helper_ConverterValorPorExtenso
 	 * @param string $numero
 	 * @return int
 	 */
-	private function real($numero) {
+	private function real($numero) 
+    {
 		$virtula = strrpos($numero, ',');
 		// Verifica se o numero possui virtula.
 		if ($virtula) {
@@ -312,7 +313,8 @@ class Helper_ConverterValorPorExtenso
 	 * @param string $numero
 	 * @return int
 	 */
-	private function centavos($numero) {
+	private function centavos($numero) 
+    {
 		$virgula = strrpos($numero, ',');
 		// Verifica se o numero possui virtula.
 		if ($virgula) {
