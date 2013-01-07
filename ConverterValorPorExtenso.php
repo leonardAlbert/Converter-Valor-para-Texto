@@ -229,18 +229,18 @@ class Helper_ConverterValorPorExtenso
             // Tratar Reais.
             $reais = $arrayNumeros[self::REAIS];
             
-            foreach ($reais as $value) {
-                // Todos os nós de Reais iram conter 3 digitos.
-                $string = $this->tresDigitos($value);
-                // Passa para inteiro o numero a ser referênciado na posição do
-                // array correspondente a string.
-                $value = (int) $value;
-                $arrayString[self::REAIS][][$value] = $string;
+            foreach ($reais as $numero) {
+                // Numero a ser referênciado na posição do array correspondente a string.
+                $key = (int) $numero;  
+                // Todos os nós de "Reais" vão conter 3 digitos.
+                $arrayString[self::REAIS][][$key] = $this->tresDigitos($numero);
             }
             
             // Tratar Centavos.
-            $centavos[$arrayNumeros[self::CENTAVOS]] = $this->doisDigitos($arrayNumeros[self::CENTAVOS]);
-            $arrayString[self::CENTAVOS] = $centavos;
+            $centavos = $arrayNumeros[self::CENTAVOS];
+            // Numero a ser referênciado na posição do array correspondente a string.
+            $key = (int) $centavos;
+            $arrayString[self::CENTAVOS][$key] = $this->doisDigitos($centavos);
             
             // Adiciona os complementos da string.
             $resultado = $this->complementoString($arrayString);
@@ -271,12 +271,9 @@ class Helper_ConverterValorPorExtenso
         if (substr_count($numero, ',') > 1) {
             throw new Exception("O número possui mais de uma virgula.");
         }
-        
-        $real    = $this->real($numero);
-        $centavo = $this->centavos($numero);
-        // Converte para array onde, $arrayNumeros[0] = Reais e $arrayNumeros[1] = Centavos.
-        $arrayNumeros[self::REAIS]    = $real;    // Reais.
-        $arrayNumeros[self::CENTAVOS] = $centavo; // Centavos.
+
+        $arrayNumeros[self::REAIS]    = $this->real($numero);     // Reais.
+        $arrayNumeros[self::CENTAVOS] = $this->centavos($numero); // Centavos.
         
         return $arrayNumeros;
     }
