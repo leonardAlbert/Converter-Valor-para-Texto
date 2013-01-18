@@ -1,4 +1,4 @@
-# Conversor Monetario para Extenso.
+# Conversor Monetário para Extenso.
 
 Converter valor para texto.
 
