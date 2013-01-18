@@ -20,4 +20,4 @@ _Leonard Albert M. Pedro_
  * "1" = "Um real."
  * "r$ 1.33" = "Cento e trinta e três reais."
 
-obs: Os números podem conter no máximo "66" caracteres.
+Obs: Os números podem conter no máximo "66" caracteres.
