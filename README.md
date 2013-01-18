@@ -18,6 +18,6 @@ _Leonard Albert M. Pedro_
  * "r$1.23"   = "Cento e vinte e três reais"
  * "$16,7,26" = "Atenção: O número possui mais de uma virgula."
  * "1" = "Um real."
- * "r$ 1.33" = "Cento e trinta e três reais."
+ * "r$ 13.3" = "Cento e trinta e três reais."
 
 Obs: Os números podem conter no máximo "66" caracteres.
