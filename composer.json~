@@ -1,0 +1,16 @@
+{
+    "name": "helper/text-convert",
+    "description": "Este sistema tem como objetivo converter os numeros passados para texto por extenso.",
+    "authors": [
+        {
+            "name": "Leonard Albert M Pedro",
+            "email": "leonard_pedro@yahoo.com.br"
+        }
+    ],
+    "require": {}
+	"autoload": {
+		"psr-0": {
+			"src": ""
+		}
+	}
+}
