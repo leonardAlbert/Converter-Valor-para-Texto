@@ -22,7 +22,7 @@ class AbstractBaseConvert implements BaseConvertInterface
             throw new \Exception("Class: {$lang} not fount.");
         }
         
-        $nameSpace = "MoneyConvert\i18n\\{$lang}";
+        $nameSpace = "MoneyConvert\\i18n\\{$lang}";
         $langType  = new $nameSpace;
         
         
