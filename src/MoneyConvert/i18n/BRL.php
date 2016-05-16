@@ -18,21 +18,21 @@ class BRL
     );
     public $digitTE = array(
         "pt_BR" =>
-            array(1 => 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezesete', 'dezoito', 'dezenove'),
+            array(1 => 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove'),
     );
     public $digitTW = array(
         "pt_BR" =>
-            array(1 => 'dez', 'vinte', 'treinta', 'quarenta', 'cinquenta', 'sessenta', 'setenta', 'opitenta', 'noventa'),
+            array(1 => 'dez', 'vinte', 'trinta', 'quarenta', 'cinquenta', 'sessenta', 'setenta', 'oitenta', 'noventa'),
     );
     public $digitTH = array(
         "pt_BR" =>
-            array(1 => 'cento','cem', 'duzentos', 'trtezentos', 'quatrocentos', 'quinentos', 'seiscentos', 'setecentos', 'oitocentos', 'novecentos'),
+            array(1 => 'cento','cem', 'duzentos', 'trezentos', 'quatrocentos', 'quinhentos', 'seiscentos', 'setecentos', 'oitocentos', 'novecentos'),
     );
     public $stepsPoint = array(
         "pt_BR" =>
             array(
                 1 => 'décimo',      // 10^1
-                     'centesimo',   //10^2
+                     'centésimo',   // 10^2
                      'milésimo'     // 10^3
             ),
     );

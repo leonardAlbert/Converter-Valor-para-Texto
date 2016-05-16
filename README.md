@@ -23,19 +23,19 @@ use MoneyConvert\Convert\MoneyToWords;
 
 $convert  = new MoneyToWords('BRL');
 
-echo $teste->convert(0).'<br>';
-echo $teste->convert(01).'<br>';
-echo $teste->convert(2).'<br>';
-echo $teste->convert(10).'<br>';
-echo $teste->convert(18).'<br>';
-echo $teste->convert(100).'<br>';
-echo $teste->convert(158).'<br>';
-echo $teste->convert(1000).'<br>';
-echo $teste->convert(1879568).'<br>';
-echo $teste->convert(2879568.01).'<br>';
-echo $teste->convert(70007879568.00).'<br>';
-echo $teste->convert(25.59).'<br>';
-echo $teste->convert(25.23).'<br>';
+echo $convert->convert(0).'<br>';
+echo $convert->convert(01).'<br>';
+echo $convert->convert(2).'<br>';
+echo $convert->convert(10).'<br>';
+echo $convert->convert(18).'<br>';
+echo $convert->convert(100).'<br>';
+echo $convert->convert(158).'<br>';
+echo $convert->convert(1000).'<br>';
+echo $convert->convert(1879568).'<br>';
+echo $convert->convert(2879568.01).'<br>';
+echo $convert->convert(70007879568.00).'<br>';
+echo $convert->convert(25.59).'<br>';
+echo $convert->convert(25.23).'<br>';
 ```
 ## Resultado
 ```

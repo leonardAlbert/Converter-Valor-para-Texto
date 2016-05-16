@@ -22,7 +22,7 @@ class AbstractBaseConvert implements BaseConvertInterface
             throw new \Exception("Class: {$lang} not fount.");
         }
         
-        $nameSpace = "MoneyConvert\i18n\\{$lang}";
+        $nameSpace = "MoneyConvert\\i18n\\{$lang}";
         $langType  = new $nameSpace;
         
         
@@ -194,11 +194,16 @@ class AbstractBaseConvert implements BaseConvertInterface
         $groupArray = array();
         if (!$groupPoint) {
             if ($d3 != 0){
-                if($d1 == 0 && $d2 == 0 && $d3 == 1 && $langType->lang == 'pt_BR'){
-                    $groupArray[] = $langType->digitTH[$langType->lang][2];
-                }else{
-                    $groupArray[] = $langType->digitTH[$langType->lang][$d3];
-                    
+                if($d3 == 1) {
+                    //if the word needed is 'cem'
+                    if($d1 == 0 && $d2 == 0 && $langType->lang == 'pt_BR'){
+                        $groupArray[] = $langType->digitTH[$langType->lang][2];
+                    //if the word needed is 'cento'
+                    }else {
+                        $groupArray[] = $langType->digitTH[$langType->lang][$d3];
+                    }
+                } else {
+                    $groupArray[] = $langType->digitTH[$langType->lang][$d3 + 1];
                 }
             }
             
