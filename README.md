@@ -6,58 +6,50 @@ Converter valor para texto.
 Este sistema tem como objetivo converter os numeros passados para texto por extenso.
 
 ## Autor
-_Leonard Albert M. Pedro_
+. _Leonard Albert M. Pedro_
+
+## Colaborador
+. [_Diego Brocanelli_](https://github.com/Diego-Brocanelli)
 
 ## Ferramentas Utilizadas.
  * _PHP_
  * Rafatoração baseado no repośitório: [https://github.com/md-amanalikhani/number-2-text_PHP](https://github.com/md-amanalikhani/number-2-text_PHP)
+
+## Requisitos 
+
+. [INTL Extension](http://php.net/manual/pt_BR/book.intl.php)
 
 
 ## Exemplos:
 ### BRL
 ```php
 <?php
+
 require_once __DIR__.'/vendor/autoload.php';
 
 use MoneyConvert\Convert\MoneyToWords;
 
 $convert  = new MoneyToWords('BRL');
 
-echo $teste->convert(0).'<br>';
-echo $teste->convert(01).'<br>';
-echo $teste->convert(2).'<br>';
-echo $teste->convert(10).'<br>';
-echo $teste->convert(18).'<br>';
-echo $teste->convert(100).'<br>';
-echo $teste->convert(158).'<br>';
-echo $teste->convert(1000).'<br>';
-echo $teste->convert(1879568).'<br>';
-echo $teste->convert(2879568.01).'<br>';
-echo $teste->convert(70007879568.00).'<br>';
-echo $teste->convert(25.59).'<br>';
-echo $teste->convert(25.23).'<br>';
+echo $convert->convert('R$01.00').'<br>';
+echo $convert->convert('$125.67').'<br>';
+echo $convert->convert('8563754.01').'<br>';
+echo $convert->convert('01.01').'<br>';
+echo $convert->convert('0.01').'<br>';
+echo $convert->convert('111.11').'<br>';
+echo $convert->convert('25.00').'<br>';
+echo $convert->convert('1.25').'<br>';
+echo $convert->convert('7596.37').'<br>';
 ```
 ## Resultado
 ```
-Value informed is zero, please report value bigger than zero
-um real  
-dois reais  
-dez reais  
-dezoito reais  
-cem reais  
-cento e cinquenta e oito reais  
-um mil reais  
-um milhão e setecentos e setenta e nove mil e quatrocentos e sessenta e oito reais  
-dois milhões e setecentos e setenta e nove mil e quatrocentos e sessenta e oito reais e um centavo
-setenta bilhões e sete milhões e setecentos e setenta e nove mil e quatrocentos e sessenta e oito reais  
-vinte e cinco reais e cinquenta e nove centavos
-vinte e cinco reais e vinte e três centavos
+Um real
+Cento e vinte e cinco reais e sessenta e sete centavos
+Oito milhões e quinhentos e sessenta e três mil e setecentos e cinquenta e quatro reais e um centavo
+Um real e um centavo
+Um centavo
+Cento e onze reais e onze centavos
+Vinte e cinco reais
+Um real e vinte e cinco centavos
+Sete mil e quinhentos e noventa e seis reais e trinta e sete centavos
 ```
- * "R$201,1"  = "Duzentos e um reais e um centavo"
- * "001,56"   = "Um real e cinquenta e seis centavos"
- * "r$1.23"   = "Cento e vinte e três reais"
- * "$16,7,26" = "Atenção: O número possui mais de uma virgula."
- * "1" = "Um real."
- * "r$ 13.3" = "Cento e trinta e três reais."
-
-Obs: Os números podem conter no máximo "66" caracteres.
